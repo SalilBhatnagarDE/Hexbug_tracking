@@ -53,15 +53,31 @@ A set of videos are provided that contain the ground-truth positional informatio
 # Results and Experiments
   -  Achieved second position overall, https://traco.anki.xyz/leaderboard.php
   -  Scores with different experiments (test data), lower the better.
+    
     ![Results](4.jpg)
     ![Results](5.jpg)
 
 # Code
   - **Sorting / Associative algorithm**:
 
-
 # Full Report 
   - **[View the PDF](Towards_Seamless_Hex-Bug_Tracking_Salil_Bhatnagar_23220858.pdf)**
+    
+# Code
+- **train.py**:
+  - The script initializes a PyTorch Lightning training pipeline for a DETR model, processes the COCO dataset for object detection, and manages training with custom data loaders, early stopping, and checkpointing.
+  - It uses a pre-trained image processor and conducts training with GPU acceleration, logging results via TensorBoard. Upon execution, the model is trained, validated, and saved automatically.
+ 
+- **post_process.py**:
+  - The script defines functions to generate initial and final predictions of object locations in video frames using an object detection model, applying a threshold to filter predictions.
+  - It calculates initial predictions per frame, adjusts them using an associative algorithm to maintain consistency across frames, and handles cases with fewer detections than expected by backtracking to match with previous frames' data. 
+  
+- **visualize.py**:
+  - The script loads the model from a checkpoint and evaluates the test dataset, with results plotted and saved using Matplotlib.
+
+- **final_inference.py**:
+  - The script loads the model from a checkpoint and evaluates the test dataset, with results plotted and saved using Matplotlib.
+
 
 
 
