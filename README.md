@@ -11,10 +11,10 @@ A set of videos are provided that contain the ground-truth positional informatio
 - **Build an AI agent to track heads of hexbugs**.
 - **Starting Point**: 100 videos and annotations were provided.
 - **Performance**: The agent should generalize well even in very complex environments.
-[![Complex Enviornments](2.jpg)]
+![Complex Enviornments](2.jpg)
 - **Scores or Evaluation Metric**
 
-[![Scores](3.jpg)]
+![Scores](3.jpg)
 
 # Methodology
 - **Used Detection Transformer (DETR) with different backbones**
@@ -38,6 +38,24 @@ A set of videos are provided that contain the ground-truth positional informatio
   - **Coefficient in the CE loss for class imbalance** due to more queries in the decoder
   - **Learning rate** for backbone `0.00001`, and Lr for transformer heads `0.0001`
   - **Early stopping, model checkpoint saving and tensorboard logging**
+
+- **Post Processing**
+  - **Sorting / Associative algorithm**:
+    -   The algorithm associates the current frame detections with previous frames
+    -   In case of missing detections, it starts a new tracking
+    -   In case of extra detections, it eliminates wrong tracking
+   
+- **Further comparisons**
+  - **Sorting / Associative algorithm**:
+    -  Experimented with K-RCNN (Key point RCNN)
+    -  Documented and compared with DETR Transformer based approach
+
+- **Results**
+  -  Achieved second position overall, https://traco.anki.xyz/leaderboard.php
+  -  Scores with different experiments (test data), lower the better.
+  -  ![Results](4.jpg)
+  -  ![Results](5.jpg)
+
 
 
 
