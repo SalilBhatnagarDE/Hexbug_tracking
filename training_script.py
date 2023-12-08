@@ -42,6 +42,23 @@ if __name__ == '__main__':
             pixel_values = encoding["pixel_values"].squeeze()  # remove batch dimension
             target = encoding["labels"][0]  # remove batch dimension
 
+            # Data augmentation :
+            # Data Augmentation applied
+            if self.train ==True:
+                p = np.random.rand()
+                if p<=0.5:
+                    transform = transforms.Compose([
+                        transforms.ColorJitter(brightness=(0.8,1.5), contrast=(0.8,1.5),
+                                               saturation=(0.8,1.5), hue=(-0.1,0.1))])
+                    pixel_values = transform(pixel_values)
+
+                if p>0.5:
+                    noise_transform = transforms.Compose([
+                        transforms.RandomApply([transforms.GaussianBlur(
+                            kernel_size=5, sigma=(0.1, 3.0))])
+                    ])
+                    pixel_values = noise_transform(pixel_values)
+
             return pixel_values, target
             
     # Loading the processor for image processing
