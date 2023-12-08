@@ -5,6 +5,6 @@ In the Tracking Olympiad Project : Summer Semester 2023 at FAU Erlangen, Germany
 
 A set of videos are provided that contain the ground-truth positional information and we will implement an own tracking technique. 
 
-[![See Hexbugs](images/1.jpg)]([https://youtube.com/watch?v=video_id](https://youtube.com/shorts/V4Rl51bUAsw?feature=share)https://youtube.com/shorts/V4Rl51bUAsw?feature=share)
+[![See Hexbugs](1.jpg)]([https://youtube.com/watch?v=video_id](https://youtube.com/shorts/V4Rl51bUAsw?feature=share)https://youtube.com/shorts/V4Rl51bUAsw?feature=share)
 
 # About my methodology 
