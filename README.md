@@ -50,12 +50,18 @@ A set of videos are provided that contain the ground-truth positional informatio
     -  Experimented with K-RCNN (Key point RCNN)
     -  Documented and compared with DETR Transformer based approach
 
-- **Results**
+# Results and Experiments
   -  Achieved second position overall, https://traco.anki.xyz/leaderboard.php
   -  Scores with different experiments (test data), lower the better.
-  -  ![Results](4.jpg)
-  -  ![Results](5.jpg)
+    ![Results](4.jpg)
+    ![Results](5.jpg)
 
+# Code
+  - **Sorting / Associative algorithm**:
+
+
+# Full Report 
+  - **[View the PDF](Towards_Seamless_Hex-Bug_Tracking_Salil_Bhatnagar_23220858.pdf)**
 
 
 
