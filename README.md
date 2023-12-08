@@ -77,7 +77,7 @@ Dataset and information can be found on official webpage : https://traco.anki.xy
   - The script loads the model from a checkpoint and evaluates the test dataset, with results plotted and saved using Matplotlib.
 
 - **final_inference.py**:
-  - The script loads the model from a checkpoint and evaluates the test dataset, with results plotted and saved using Matplotlib.
+  - For final inference script
 
 
 
