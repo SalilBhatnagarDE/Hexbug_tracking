@@ -53,7 +53,6 @@ A set of videos are provided that contain the ground-truth positional informatio
 # Results and Experiments
   -  Achieved second position overall, https://traco.anki.xyz/leaderboard.php
   -  Scores with different experiments (test data), lower the better.
-    
     ![Results](4.jpg)
     ![Results](5.jpg)
 
