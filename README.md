@@ -5,16 +5,18 @@ In the Tracking Olympiad Project : Summer Semester 2023 at FAU Erlangen, Germany
 
 A set of videos are provided that contain the ground-truth positional information and we will implement an own tracking technique. 
 
-[![See Hexbugs](1.jpg)](https://youtube.com/shorts/V4Rl51bUAsw?feature=share)
+Dataset and information can be found on official webpage : https://traco.anki.xyz/
+
+[![See Hexbugs](images/1.jpg)](https://youtube.com/shorts/V4Rl51bUAsw?feature=share)
 
 # Problem Statement
 - **Build an AI agent to track heads of hexbugs**.
 - **Starting Point**: 100 videos and annotations were provided.
 - **Performance**: The agent should generalize well even in very complex environments.
-![Complex Enviornments](2.jpg)
+![Complex Enviornments](images/2.jpg)
 - **Scores or Evaluation Metric**
 
-![Scores](3.jpg)
+![Scores](images/3.jpg)
 
 # Methodology
 - **Used Detection Transformer (DETR) with different backbones**
@@ -53,8 +55,8 @@ A set of videos are provided that contain the ground-truth positional informatio
 # Results and Experiments
   -  Achieved second position overall, https://traco.anki.xyz/leaderboard.php
   -  Scores with different experiments (test data), lower the better.
-        ![Results](4.jpg)
-        ![Results](5.jpg)
+        ![Results](images/4.jpg)
+        ![Results](images/5.jpg)
 
 # Code
   - **Sorting / Associative algorithm**:
