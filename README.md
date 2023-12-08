@@ -13,6 +13,7 @@ A set of videos are provided that contain the ground-truth positional informatio
 - **Performance**: The agent should generalize well even in very complex environments.
 [![Complex Enviornments](2.jpg)]
 - **Scores or Evaluation Metric**
+
 [![Scores](3.jpg)]
 
 # Methodology
@@ -20,23 +21,23 @@ A set of videos are provided that contain the ground-truth positional informatio
 - **Used regression head to regress the x,y coordinates of head of hexbugs**
 - **ResNet 152 Dilated Convolutional backbone performs best**
 - **Data Preprocessing includes :**
-- - Normalization
+  - Normalization
   - Data Augmentation
-  - -Color Jitter
+  - Color Jitter
   - Gaussian blur filter
   - Random Rotation
   - Random Invert
 
 - **HyperParameter Tunning and Training**
-- - **4 Nvidia A100 GPU (40 GB each)** on Alex HPC cluster (total batch size kept as `56`)
-- - **Coefficients for loss function**:
-  - -   Total loss = `10 * bbox_loss + 2 * ce_loss + 2 * loss_giou + 10 * reg_loss`
+  - **4 Nvidia A100 GPU (40 GB each)** on Alex HPC cluster (total batch size kept as `56`)
+  - **Coefficients for loss function**:
+    -   Total loss = `10 * bbox_loss + 2 * ce_loss + 2 * loss_giou + 10 * reg_loss`
 
-- - **Use of auxiliary cross entropy losses in each of the decoder layer**: Set to `True`
-- - **Coefficients for cost in Hungarian algorithm assignment**
-- - **Coefficient in the CE loss for class imbalance** due to more queries in the decoder
-- - **Learning rate** for backbone `0.00001`, and Lr for transformer heads `0.0001`
-- - **Early stopping, model checkpoint saving and tensorboard logging**
+  - **Use of auxiliary cross entropy losses in each of the decoder layer**: Set to `True`
+  - **Coefficients for cost in Hungarian algorithm assignment**
+  - **Coefficient in the CE loss for class imbalance** due to more queries in the decoder
+  - **Learning rate** for backbone `0.00001`, and Lr for transformer heads `0.0001`
+  - **Early stopping, model checkpoint saving and tensorboard logging**
 
 
 
