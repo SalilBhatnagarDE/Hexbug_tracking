@@ -9,6 +9,11 @@ if __name__ == '__main__':
     import torchvision.transforms as transforms
     from torchvision.transforms import GaussianBlur
     import numpy as np
+    from transformers import DetrImageProcessor
+    import pickle
+    import pytorch_lightning as pl
+    from transformers import DetrConfig, DetrForObjectDetection
+    import torch
 
     # Clearing GPU memory cache to avoid memory issues
     torch.cuda.empty_cache()
@@ -40,8 +45,6 @@ if __name__ == '__main__':
             return pixel_values, target
             
     # Loading the processor for image processing
-    from transformers import DetrImageProcessor
-    import pickle
     with open("/home/hpc/iwb3/iwb3013h/Traco/org_size/Full_trainable/five_queries/auxloss/resnet101/processor.pkl", "rb") as f:
         processor = pickle.load(f)
 
@@ -71,10 +74,6 @@ if __name__ == '__main__':
     val_dataloader = DataLoader(val_dataset, collate_fn=collate_fn, batch_size=10, shuffle=False, num_workers=32)
 
     # Defining the DETR model using PyTorch Lightning
-    import pytorch_lightning as pl
-    from transformers import DetrConfig, DetrForObjectDetection
-    import torch
-
     class Detr(pl.LightningModule):
         def __init__(self, lr, lr_backbone, weight_decay):
             """
